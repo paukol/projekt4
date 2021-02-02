@@ -1,47 +1,52 @@
 /*Global*/
 $color-light: #f5f6fa;
 $color-main: #f1c40f;
+$color-background: #dfe6e9;
+$color-subtitle: #718093;
+$color-hover: #ffeaa7;
 
 *, *::before, *::after {
         box-sizing: border-box;
 }
-* {
-  margin: 0;
+body {
+  margin: 0 auto;
 }
 /*header*/
-header {
-  min-height: 500px;
-  position: relative;
+header
+{
   background-image: url("https://images.pexels.com/photos/1558691/pexels-photo-1558691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-position: center;
-  background-size: cover;
+  height: 500px;
+  .container {
+    display: flex;
+    justify-content: space-around;
+ }
 }
 .header{
-  position: absolute;
-  margin-top: 20px;
-  color: $color-main;
   text-align: left;
-  font-size: 25px;
-}
-.navbar-nav{
-  display: flex;
-  justify-content: flex-end;
-  list-style-type: none;
-  text-align: right;
-}
-.navbar-nav a {
-  display: block;
-  text-decoration: none;
+  padding-top: 5px;
   color: $color-main;
-  padding:10px;
-  font-weight: bold;
+  font-size: 20px;
 }
-.navbar-nav a:hover {
-  background: #ffeaa7;
+.navbar-nav
+{
+  display:flex;
+  padding-top: 13px;
+  list-style-type: none;
+   a
+  {
+    text-decoration: none;
+    color: $color-main;
+    padding:10px;
+    font-weight: bold;
+  }
+   a:hover
+  {
+    background: $color-hover;
+  }
 }
 .splash-inner {
   text-align: center;
-  margin: 20px;
   padding: 20px;
 }
 .title {
@@ -68,11 +73,9 @@ header {
   font-size: 40px;
 }
 .info-subtitle {
-  margin: 30px;
-  padding-bottom: 30px;
   text-align: center;
   font-size: 15px;
-  color: #718093;
+  color: $color-subtitle;
 }
 .box-body {
   text-align: center;
@@ -86,66 +89,75 @@ header {
 }
 /*Portfolio*/
 .portfolio {
-  background: #f1f2f6;
+  background: $color-background;
   padding-bottom: 20px;
 }
 .row {
-  padding-button: 5px;
   display: flex;
   justify-content: space-between;
 }
-.card {
+.card
+  {
   background: $color-light;
-  margin-bottom: 5px;
   border: 1px solid rgba(0,0,0,.125);
   padding-right: 0;
   padding-left: 0;
-}
-.card img {
-  max-width: 100%;
-  object-fit: cover;
+  margin: 10px;
+    img
+   {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+   }
 }
 .card-body {
+  margin: 10px;
+  padding: 10px;
   background: $color-light;
   text-align: center;
 }
-.card-title, {
-  margin-bottom: 0;
+.card-title {
   font-size: 20px;
 }
  .card-text {
-   padding: 0;
  }
  /*footer*/
- footer {
-   margin-top: 10px;
-   margin-bottom: 10px;
- }
- .a {
-   color: $color-light;
- }
- .fab {
-   background: black;
-   background: black;
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
-   color: $color-light;
-   font-size: 20px;
-   margin: 0 auto;
-   text-align: center;
-   line-height: 1.5;
- }
- .footer-list {
+footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+    .a {
+      color: $color-light;
+    }
+    .fab {
+      background: black;
+      background: black;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: $color-light;
+      font-size: 20px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.5;
+    }
+}
+.p {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-list
+ {
    padding: 0;
- }
- .footer-list li {
-    display: inline-block;
- }
- .footer-list a {
-    color: $color-light;
-    font-size:2px;
- }
+   display: flex;
+   list-style-type: none;
+    a
+    {
+      color: $color-light;
+      font-size:2px;
+    }
+}
  @media (max-width: 768px) {
 .navbar {
   display: flex;
@@ -155,7 +167,14 @@ header {
    flex-wrap: wrap;
    max-width: 200px;
  }
-   .header {
-     padding-top: 20px;
+  .header {
+    padding-top: 20px;
    }
  }
+ @media (min-width: 576px) {
+
+.card img {
+  height: 250px;
+  max-width: 100%;
+}
+}
