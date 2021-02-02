@@ -19,7 +19,8 @@ header
   height: 500px;
   .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: right;
  }
 }
 .header{
@@ -66,9 +67,11 @@ header
   text-decoration: none;
 }
 /*info*/
-.info-title {
+.info {
   margin: 30px;
-  padding-top: 30px;
+}
+.info-title {
+  padding: 30px;
   text-align: center;
   font-size: 40px;
 }
@@ -111,15 +114,18 @@ header
    }
 }
 .card-body {
-  margin: 10px;
-  padding: 10px;
   background: $color-light;
   text-align: center;
+  margin: 15px;
 }
 .card-title {
   font-size: 20px;
+  margin: 0;
+  padding:0;
 }
  .card-text {
+   margin: 0;
+   padding: 0;
  }
  /*footer*/
 footer {
