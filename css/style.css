@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
 /*header*/
 header {
   min-height: 500px;
@@ -136,6 +140,11 @@ header {
 }
 
 /*footer*/
+footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .a {
   color: #f5f6fa;
 }
@@ -166,21 +175,20 @@ header {
   font-size: 2px;
 }
 
-@media (max-width: 700px) {
-  .navbar-nav a {
-    font-size: 5px;
+@media (max-width: 768px) {
+  .navbar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .navbar-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 200px;
   }
   .header {
     padding-top: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .button {
-    font-size: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    width: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */
